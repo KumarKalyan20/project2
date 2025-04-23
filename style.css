@@ -4,3 +4,56 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* 
+.navbar-brand img {
+    height: 40px;
+  }
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+  } */
+/* .movie-thumb {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+} */
+
+.trending-row {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto;
+    flex-direction: row;
+}
+.trending-row img {
+    height: 300px; /* Adjust as needed */
+    border-radius: 10px;
+    transition: transform 0.3s;
+    flex-direction: row;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .trending-row img:hover {
+    transform: scale(1.05);
+  }
+
+/* .movie-thumb:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  } */
+  .hero {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .{
+    background-color: blue;
+  }
+  .joinchannel{
+    margin-left: 10px;
+    padding: 20px;
+    background: #00182F;
+    border-radius: 22px;
+  }
+   
+  
