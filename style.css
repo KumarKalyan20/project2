@@ -4,19 +4,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* 
-.navbar-brand img {
-    height: 40px;
-  }
-  .nav-link {
-    color: #fff !important;
-    font-weight: 500;
-  } */
-/* .movie-thumb {
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-} */
-
 .trending-row {
     display: flex;
     gap: 15px;
@@ -24,6 +11,7 @@ body {
     overflow-x: auto;
     flex-direction: row;
 }
+
 .trending-row img {
     height: 300px; /* Adjust as needed */
     border-radius: 10px;
@@ -37,23 +25,130 @@ body {
     transform: scale(1.05);
   }
 
-/* .movie-thumb:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  } */
   .hero {
     background-size: cover;
     background-position: center;
   }
 
-  .{
-    background-color: blue;
-  }
   .joinchannel{
     margin-left: 10px;
     padding: 20px;
     background: #00182F;
     border-radius: 22px;
+    
   }
    
+  .faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    height: 80px;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  .faq-answer {
+    background-color:#343a40;
+    padding: 15px;
+    border-left: 4px solid #343a40;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+  }
+
+
+  .faq-question.active::after {
+    content: "x";
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/heros.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
+  }
   
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  .hero h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    margin-bottom: 20px;
+  }
+  
+  .email-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .email-form input[type="email"] {
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 2px;
+    min-width: 250px;
+  }
+  
+  .email-form button {
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .email-form button:hover {
+    background-color: #f40612;
+  }
+
+  #emailInput {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
