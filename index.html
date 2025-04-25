@@ -10,19 +10,39 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><img src="images/netflix logo.jpg" alt="Netflix" height="40" width="70"/></a>   
-    </nav>
+    </nav> -->
 
   <div class="hero">
+    <nav class="navbar">
+      <a class="navbar-brand" href="#"><img src="images/netflix logo.jpg" alt="Netflix" height="100" width="200"/></a>   
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <!-- Language Dropdown -->
+       <div class="language-dropdown">
+        <button onclick="toggleDropdown()" class="lang-btn">
+          🌐 English ▼
+        </button>
+
+        <div id="lang-options" class="dropdown-options">
+          <a href="#">Hindi</a>
+          <a href="#">Kannada</a>
+        </div>
+       </div>
+      
+        <!-- Sign In Button -->
+        <button class="signin-btn">Sign In</button>
+      </div>
+      
+    </nav>
     <div class="overlay"></div>
     <div class="hero-content">
       <h1 class="main-heading">Unlimited movies, TV shows and more</h1>
        <p class="sub-text">Ready to watch? Enter your email to create or restart your membership.</p> 
-   <div class="email-form">
-    <input type="email" placeholder="Email address" id="emailInput" />
-    <button type="button" id="getStartedBtn">Get Started</button>
-     </div>
+       <div class="email-section">
+        <input type="email" id="email" placeholder="Email address" required />
+        <button class="red-button" onclick="handleSubmit()">Get Started</button>
+      </div>         
    </div>
   </div>
 
@@ -35,36 +55,12 @@
   <button type="button" id="getStartedBtn">Get Started</button>
 </div> -->
 
-
-    <!--Navbar-->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="images/netflix logo.jpg" alt="Netflix" height="40" /></a>   
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a class="nav-link" href="#">Home</a> </li> 
-         <li class="nav-item"><a class="nav-link" href="#">TV Shows</a> </li> 
-         <li class="nav-item"><a class="nav-link" href="#">Movies</a> </li> 
-         <li class="nav-item"><a class="nav-link" href="#">Latest</a>  </li>
-          <li class="nav-item"><a class="nav-link" href="#">My List</a> </li>
-        </ul>       
-       </div>
-     </nav> -->
-
-  <!-- Hero Section -->
-   <!-- <header  class="hero text-white text-center d-flex align-items-center">
-      <div class="container">
-        <h1 class="display-4">Watch the Latest Shows</h1>
-        <p class="lead">Only On Netflix</p>
-        <button type="button" class="btn btn-danger">Watch now</button>
-      </div>
-   </header> -->
-
    <!--Movie Section-->
 
    <section class="container">
     <h3 class="text-white mb-4">Trending Now</h3>
     <div class="trending-row">
-      <div class="row">
+      <div class="row" id="movieSlider">
         <div class="col-md-3 col-sm-6 mb-4">
           <img src="images/movie1.jpg" class="img-fluid movie-thumb" alt="Movie 1" />
         </div>
@@ -78,10 +74,16 @@
         <div class="col-md-3 col-sm-6 mb-4">
           <img src="images/movie4.jpg" class="img-fluid movie-thumb" alt="Movie 4" />
         </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <img src="images/movie5.jpg" class="img-fluid movie-thumb" alt="Movie 5" />
+        </div>
+
+        <button class="nav-button" onclick="slideNext()">&#62;</button>
       </div>
         <!--Repeat for more thumbnails-->
       </div>
-    </div> 
+    
   </section>
 
   <section class="container">
@@ -89,11 +91,7 @@
     <div class="join d-flex">
       <div class="joinchannel">
       <h2>Enjoy on your TV</h2>
-      <p>Watch on smart TVs,
-         PlayStation, Xbox, 
-         Chromecast, Apple TV,
-          Blu-ray players and more.
-        </p>
+      <p>Watch on smart TVs, PlayStation, Xbox,Chromecast, Apple TV, Blu-ray players and more. </p>
         <i class="fa-solid fa-tv"></i>
       </div>
 
@@ -103,25 +101,23 @@
         <i class="fa-solid fa-circle-arrow-down"></i>
         </div>
       
-        <div class="joinchannel bg-body-secondary">
-          <h2>Watch everywhere </h2>
-          <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
+       <div class="joinchannel bg-body-secondary">
+        <h2>Watch everywhere </h2>
+         <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+         <i class="fa-solid fa-wand-magic-sparkles"></i>
+         </div>
 
-          <div class="joinchannel ">
-            <h2>Create profiles for kids</h2>
-            <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
-            <img src="file:///C:/Users/LENOVO/Downloads/face_6_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="kids">
-            </div>
-          
+       <div class="joinchannel ">
+        <h2>Create profiles for kids</h2>
+        <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+         <img src="file:///C:/Users/LENOVO/Downloads/face_6_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="kids">
+        </div>     
      </div>
   </section>
 
 
   <div class="container my-5">
     <h2 class="mb-4">Frequently Asked Questions</h2>
- 
     <div class="faq-item">
       <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
         What is Netflix?
@@ -138,17 +134,13 @@
         <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
        </div> 
     
-
       <div class="faq-question">
         Where can I watch?
       </div>
       <div id="faq1" class="collapse faq-answer">
         <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
-
         <p>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
-
       </div>
-
 
       <div class="faq-question">
         How do I cancel?
@@ -158,7 +150,6 @@
       <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
       </div>
 
-
       <div class="faq-question">
         What can I watch on Netflix?
       </div>
@@ -167,8 +158,6 @@
       <p> Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
       </div>
 
-    
-
       <div class="faq-question">
         Is Netflix good for kids?
       </div>
@@ -176,12 +165,9 @@
       <p> The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.   
         Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
       </div>
-
     </div>
     </div>
   </div>
-
-
 
    <!-- Footer -->
    <footer class="text-center text-white py-3 bg-dark">
