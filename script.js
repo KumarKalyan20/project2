@@ -1,4 +1,3 @@
-
 console.log("Netflix Clone Ready!");
 
 
@@ -113,17 +112,6 @@ questions.forEach(q => {
     }
   };
 
-
-
-
-
-
-
-
-
-
-
-
   let currentIndex = 0;
   const row = document.getElementById('movieSlider');
   const totalMovies = 10;
@@ -136,3 +124,5 @@ questions.forEach(q => {
     }
   }
 
+
+  

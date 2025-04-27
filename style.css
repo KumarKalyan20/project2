@@ -1,279 +1,280 @@
 body {
-    background-color: #141414;
-    color: white;
-    font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 .trending-row {
-    display: flex;
-    gap: 15px;
-    padding: 20px;
-    overflow-x: auto;
-    flex-direction: row;
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  overflow-x: auto;
+  flex-direction: row;
 
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: auto; 
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto; 
 }
 
 
 .trending-row ::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+display: none; /* Hide scrollbar */
 }
 
 
 .slider {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width:calc(250%);
+display: flex;
+transition: transform 0.4s ease-in-out;
+width:calc(250%);
 }
 
 
 .nav-button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
+position: absolute;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+background-color: rgba(0,0,0,0.5);
+color: white;
+border: none;
+font-size: 24px;
+padding: 10px;
+cursor: pointer;
+z-index: 10;
+border-radius: 50%;
 }
 
 
 
 .trending-row img {
-    height: 300px; /* Adjust as needed */
-    border-radius: 10px;
-    transition: transform 0.3s;
-    flex-direction: row;
-    cursor: pointer;
-    margin: 10px; 
-
-   
+  height: 300px; /* Adjust as needed */
+  border-radius: 10px;
+  transition: transform 0.3s;
+  flex-direction: row;
+  cursor: pointer;
+  margin: 10px; 
 
  
-  }
-
-  .trending-row img:hover {
-    transform: scale(1.05);
-  }
-
-  .hero {
-    background-size: cover;
-    background-position: center;
-  }  */
 
 
-  .joinchannel{
-    margin-left: 10px;
-    padding: 20px;
-    background: #00022E;
-    border-radius: 22px;
-    
-  }
-   
-  .faq-question {
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #343a40;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 10px;
-    height: 80px;
-    font-family: Arial, sans-serif;
-    position: relative;
-  }
-  .faq-answer {
-    background-color:#343a40;
-    padding: 15px;
-    border-left: 4px solid #343a40;
-    border-radius: 0 0 5px 5px;
-  }
+}
 
-  .faq-question::after {
-    content: "+";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-  }
+.trending-row img:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+}  */
 
 
-  .faq-question.active::after {
-    content: "x";
-  }
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  .hero {
-    position: relative;
-    height: 100vh;
-    background: url('images/heros.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-
-
-  .navbar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-right: 50px;
-    background: none;
-    justify-content: center;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    padding: 20px;
-  }
+.joinchannel{
+  margin-left: 10px;
+  padding: 20px;
+  background: #00022E;
+  border-radius: 22px;
   
-  .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-  }
-  
-  .hero h3 {
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    margin-bottom: 20px;
-  }
-  
-  /* .email-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .email-form input[type="email"] {
-    padding: 12px;
-    font-size: 1em;
-    border: none;
-    border-radius: 2px;
-    min-width: 250px;
-  }
-  
-  .email-form button {
-    padding: 12px 20px;
-    font-size: 1em;
-    background-color: #e50914;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .email-form button:hover {
-    background-color: #f40612;
-  }
+}
+ 
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  height: 80px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+.faq-answer {
+  background-color:#343a40;
+  padding: 15px;
+  border-left: 4px solid #343a40;
+  border-radius: 0 0 5px 5px;
+}
 
-  #emailInput {
-    padding: 10px;
-    border-radius: 4px;
-    outline: none;
-    transition: all 0.3s ease;
-  } */
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+}
 
-  .email-section input {
-    padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    border: none;
-    margin-right: 10px;
-    border-radius: 4px;
-  }
-  
-  .red-button {
-    background-color: #e50914;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .red-button:hover {
-    background-color: #f40612;
-  }
-  
 
-  .language-dropdown{
-    position: relative;
-    display: inline-block;
-  }
+.faq-question.active::after {
+  content: "x";
+}
 
-  .lang-btn{
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/heros.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 50px;
+  background: none;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+/* .email-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.email-form input[type="email"] {
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 2px;
+  min-width: 250px;
+}
+
+.email-form button {
+  padding: 12px 20px;
+  font-size: 1em;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.email-form button:hover {
+  background-color: #f40612;
+}
+
+#emailInput {
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+} */
+
+.email-section input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.red-button {
+  background-color: #e50914;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.red-button:hover {
+  background-color: #f40612;
+}
+
+
+.language-dropdown{
+  position: relative;
+  display: inline-block;
+  left: 700px;
+}
+
+.lang-btn{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 .dropdown-options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: black;
-  min-width: 100px;
-  border: 1px solid #333;
-  z-index: 10;
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: black;
+min-width: 100px;
+border: 1px solid #333;
+z-index: 10;
 }
-  
+
 
 .dropdown-options a  {
-  color: white;
-  padding: 10px 12px;
-  display: block;
-  text-decoration: none;
+color: white;
+padding: 10px 12px;
+display: block;
+text-decoration: none;
 }
 
 
 .dropdown-options a:hover {
-  background-color: #333;
+background-color: #333;
 }
-  .signin-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 700px;
-  }
-  
+.signin-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 700px;
+}
+
