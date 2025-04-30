@@ -24,9 +24,6 @@ questions.forEach(q => {
     }
   }
 
-
-
-
   function handleSubmit() {
     const email = document.getElementById("email").value;
     if (email.trim() !== "") {
@@ -36,7 +33,6 @@ questions.forEach(q => {
     }
   }
   
-
 
   function slideLeft() {
     const slider = document.getElementById('movieSlider');
@@ -53,6 +49,31 @@ questions.forEach(q => {
       behavior: 'smooth'
     });
   }
+
+
+  document.querySelector('a').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent reload
+  });
+
+
+  const validUsername = "admin";
+  const validPassword = "password123";
+
+  function validateLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === validUsername && password === validPassword) {
+      alert("Login successful!");
+      return true;
+    } else {
+      document.getElementById("message").innerText = "Invalid username or password!";
+      return false;
+    }
+  }
+
+
+  
   
 
   

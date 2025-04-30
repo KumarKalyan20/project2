@@ -2,6 +2,7 @@ body {
   background-color: #141414;
   color: white;
   font-family: Arial, sans-serif;
+  
 }
 
 .trending-row {
@@ -157,7 +158,7 @@ display: none; /* Hide scrollbar */
   background: none;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   z-index: 20;
 }
 
@@ -166,49 +167,6 @@ display: none; /* Hide scrollbar */
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
-/* hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 20px;  
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.hero h3 {
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  margin-bottom: 20px;
-}
-
-.email-section input {
-  padding: 10px;
-  font-size: 16px;
-  width: 250px;
-  border: none;
-  margin-right: 10px;
-  border-radius: 4px;
-  margin-bottom: 40px;
-}
-
-.red-button {
-  background-color: #e50914;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-} */
-
 
 .hero-content {
   color: white;
@@ -279,47 +237,14 @@ display: none; /* Hide scrollbar */
   }
 }
 
-/* .red-button:hover {
-  background-color: #f40612;
-} */
-
-/* .language-dropdown{
-  position: relative;
-  display: inline-block;
-  left: 700px;
+.dropdown{
+  margin-left: 700px;
 }
 
-.lang-btn{
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 8px 12px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+.dropdown-menu{
+  background: whitesmoke;
 }
 
-.dropdown-options {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-background-color: black;
-min-width: 100px;
-border: 1px solid #333;
-z-index: 10;
-}
-
-.dropdown-options a  {
-color: white;
-padding: 10px 12px;
-display: block;
-text-decoration: none;
-}
-
-.dropdown-options a:hover {
-background-color: #333;
-} */
 .signin-btn {
   background-color: red;
   color: white;
@@ -330,6 +255,19 @@ background-color: #333;
   cursor: pointer;
   margin-left: 700px;
 }
-.dropdown{
-  margin-left: 500px;
+
+.modal{
+  position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 999;
+pointer-events: none;
+
 }
+
+
+
+
+
