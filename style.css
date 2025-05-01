@@ -2,14 +2,12 @@ body {
   background-color: #141414;
   color: white;
   font-family: Arial, sans-serif;
-  
 }
 
 .trending-row {
   position: relative;
   display: flex;
   align-items: center;
-
 }
 
 .trending-movies {
@@ -267,7 +265,19 @@ pointer-events: none;
 
 }
 
+body.modal-open {
+  overflow: hidden !important;
+}
 
+.modal.show {
+  display: block;
+  pointer-events: auto;
+}
 
-
-
+.modal-backdrop {
+  pointer-events: none;
+  z-index: 1050 !important;
+}
+.modal {
+  z-index: 1055 !important; /* Bootstrap default is 1050+ */
+}
