@@ -76,11 +76,6 @@ display: none; /* Hide scrollbar */
   transform: scale(1.05);
 }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-}  */
-
 .container-join{
   background-color: #0B0B45;   
 }
@@ -147,6 +142,8 @@ display: none; /* Hide scrollbar */
   justify-content: center;
   color: white;
   text-align: center;
+   background-size: cover;
+  background-position: center;
 }
 
 .navbar{
@@ -285,7 +282,3 @@ body.modal-open {
 .modal-backdrop {
   z-index: 1050 !important;
 }
-
-
-
-
